@@ -13,10 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('anotacaos', function (Blueprint $table) {
+        Schema::create('imagems', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
-            $table->text('nota');
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('anotacaos');
+        Schema::dropIfExists('imagems');
     }
 };
