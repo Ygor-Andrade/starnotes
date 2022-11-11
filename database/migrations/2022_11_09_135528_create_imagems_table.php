@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('imagems', function (Blueprint $table) {
             $table->id();
+            $table->string('url');
+            $table->integer('id_anotacao');
             $table->timestamps();
         });
     }

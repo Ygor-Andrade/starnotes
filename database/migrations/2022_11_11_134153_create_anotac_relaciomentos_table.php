@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('categorias', function (Blueprint $table) {
+        Schema::create('anotac_relaciomentos', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
+            $table->integer('id_anotacao');
+            $table->integer('id_pasta')->nullable('id_pasta');
+            $table->integer('id_categoria')->nullable('id_categoria');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categorias');
+        Schema::dropIfExists('anotac_relaciomentos');
     }
 };
