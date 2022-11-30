@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('anotacaos', function (Blueprint $table) {
-            $table->id();
-            $table->string('titulo');
-            $table->text('nota');
-            $table->timestamps();
-                
+        Schema::table('anotacaos', function (Blueprint $table) {
+         $table->text('descricao');
+
         });
     }
 
@@ -29,6 +26,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('anotacaos');
+        Schema::table('anotacaos', function (Blueprint $table) {
+         $table->dropColumn('descricao');
+
+        });
     }
 };

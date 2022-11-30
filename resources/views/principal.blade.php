@@ -372,20 +372,9 @@
 
  
     <div class="modal fade" id="modal-post" tabindex="-1" aria-labelledby="modal-postLabel" aria-hidden="true">
-<<<<<<< HEAD
-      <div class="modal-dialog">
-        <div class=" modal-content">
-          <div class="modal-header  ">
-            <h1 class="fs-2 text-white fw-bolder" id="modal-postLabel"> Anotação</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>  
-          <div class="modal-body">
 
-        <div class="mb-3">
-          <label for="" class="form-label"></label>
-          <textarea class="form-control" name="nota" id="nota" rows="3"></textarea>
-        </div>
-=======
+    
+
       <form>
         <div class="modal-dialog">
           <div class="modal-content">
@@ -394,7 +383,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
->>>>>>> c7194f2df17c484e571eb1a27568f42729fb07bd
+
 
           <div class="mb-3">
             <label for="" class="form-label"></label>
@@ -436,8 +425,8 @@
   <script>
     tinymce.init({
       selector: 'textarea#nota', // Replace this CSS selector to match the placeholder element for TinyMCE
-      plugins: 'code table lists',
-      toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
+      plugins: 'code table lists image',
+      toolbar: 'undo redo | image | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
     });
   </script>
 

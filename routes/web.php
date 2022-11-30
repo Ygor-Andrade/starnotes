@@ -29,4 +29,9 @@ Route::middleware([
     Route::get('/principal', function () {
         return view('principal');
     })->name('principal');
+
+
+
+
+    
 });
