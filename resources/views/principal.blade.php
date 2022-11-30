@@ -373,11 +373,11 @@
   <form>
     <div class="modal fade" id="modal-post" tabindex="-1" aria-labelledby="modal-postLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="modal-postLabel">Notas</h1>
+        <div class=" modal-content">
+          <div class="modal-header  ">
+            <h1 class="fs-2 text-white fw-bolder" id="modal-postLabel"> Anotação</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
+          </div>  
           <div class="modal-body">
 
         <div class="mb-3">
