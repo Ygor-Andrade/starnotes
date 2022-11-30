@@ -18,7 +18,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/style.css">
 
 
 </head>
@@ -119,13 +119,16 @@
 
 
     </div>
-    
-        
-    <div class="d-none d-lg-block m-4 bingalinga mx-auto">
+
+
+    <!-- <div class="d-none d-lg-block m-4 bingalinga mx-auto">
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Escreva sua anotação" aria-label="Search">
       </form>
-    </div>
+    </div> -->
+
+
+
 
     <div class="d-flex" data-masonry='{"percentPosition": true}'>
 
@@ -353,15 +356,19 @@
 
       <!-- Code begins here -->
 
-      <a href="#" class="float d-xl-none" data-bs-toggle="modal" data-bs-target="#modal-post">
-        <i class="fa fa-plus my-float"></i>
-      </a>
+
 
 
   </main>
+
+
   <footer>
 
   </footer>
+
+  <a href="#" class="bt-float " data-bs-toggle="modal" data-bs-target="#modal-post">
+    <i class="fa fa-plus my-bt-float"></i>
+  </a>
 
   <div class="modal fade" id="modal-post" tabindex="-1" aria-labelledby="modal-postLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -371,7 +378,12 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <input class="form-control" type="text" placeholder="Anotações">
+
+       <div class="mb-3">
+         <label for="" class="form-label"></label>
+         <textarea class="form-control" name="nota" id="nota" rows="3"></textarea>
+       </div>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -401,7 +413,15 @@
     async></script>
 
 
-  <!-- <script src="js/custom.js"></script> -->
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+    tinymce.init({
+      selector: 'textarea#nota', // Replace this CSS selector to match the placeholder element for TinyMCE
+      plugins: 'code table lists',
+      toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
+    });
+  </script>
+
 
 </body>
 

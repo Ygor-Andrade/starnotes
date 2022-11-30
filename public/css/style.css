@@ -1,0 +1,223 @@
+.bg-teste-fundo {
+    background-color: #005189;
+  }
+  
+  .bg-teste {
+    background-color: #00243C;
+  }
+  
+  .btn-pesquisar {
+    background-color: #005189;
+    color: #fff;
+  }
+  
+  .btn-pesquisar:hover{
+    border-color: white;
+    color: white;
+  }
+  
+  .search_input {
+    color: white;
+    border: 0;
+    outline: 0;
+    background: white;
+    width: 0;
+    opacity: 0;
+    caret-color: transparent;
+    line-height: 46px;
+    transition: width 0.4s linear;
+    border-radius: 10px
+  }
+  
+  .searchbar:hover>.search_input {
+    padding: 0 10px;
+    width: 450px;
+    caret-color: red;
+    opacity: 1;
+    transition: width 0.4s linear;
+  }
+  
+  
+  .bg-fundo {
+    background-color: #005189;
+  }
+  
+  .btn-menu {
+    color: #005189;
+  }
+  
+  .botoes-barra {
+    background-color: #005189;
+    margin-top: 5px;
+    border-color: #00243C;
+  }
+  
+  .botoes-barra:hover{
+    background-color:#00243C ;
+    border-color: white;
+  }
+  
+  /* card ROUBADO */
+  :root {
+    --primary: #100e17;
+    --secondary: #17141d;
+    --tertiary: #7a7a8c;
+    --quaternary: #0076C8;
+    --quintary: #28242f;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  
+  
+  .card-title h2 {
+    font-size: 24px;
+  }
+  
+  .card {
+    flex-shrink: 0;
+    width: 300px;
+    /* height: 400px; */
+    border-radius: 20px;
+    /* display: flex;
+    flex-direction: column; */
+    justify-content: space-between;
+    background-color: var(--secondary);
+    padding: 30px;
+    font-size: 10px;
+    /* overflow: hidden; */
+    /* position: relative; */
+    
+  }
+  
+  
+  
+  .card .data {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .card .data time {
+    color: white;
+  }
+  
+  .card h2 {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+    display: block;
+    /* height: 110px; */
+    color: white;
+  }
+  
+  .card .autor {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card .autor .img-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 3px var(--quaternary);
+    padding: 2px;
+    margin-right: 10px;
+  }
+  
+  .card .autor .img-container .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+  }
+  
+  .card .autor .info {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .info{
+  color: gray;
+  }
+  
+  .card .autor .info span {
+    display: block;
+    font-size: 10px;
+    color: var(--tertiary);
+  }
+  
+  .card .tags a {
+    display: inline-block;
+    border: solid 3px var(--quintary);
+    border-radius: 30px;
+    padding: 8px 25px;
+    text-transform: uppercase;
+    color: white ;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 3px;
+    transition: all ease-out 0.3s;
+  }
+  
+  .card .tags a:hover {
+    border-color: #fff;
+    color: var(--quaternary);
+  }
+  
+  /* separador de cards */
+  /*  */
+  
+  
+  /* mover */
+  
+  *{padding:0;margin:0;}
+  
+  body{
+  font-family:Verdana, Geneva, sans-serif;
+  font-size:18px;
+  background-color:#CCC;
+  }
+  
+  .bt-float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  background-color:#fff;
+  color:#00243C;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #0076C8;
+  }
+  
+  .my-bt-float{
+  margin-top:22px;
+  }
+  
+  .modal-content{
+  background-color: #005189;
+  }
+  
+  .btn-close{
+  color: #0076C8
+  }
+  
+  .bingalinga{
+    width: 300px;
+    height: 70px;
+  
+  }
+  
+  @media only screen and (max-width: 320px) {
+  
+  
+  
+  }
