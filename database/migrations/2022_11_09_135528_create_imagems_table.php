@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('imagems', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_anotacao');
+            $table->foreign('id_anotacao')->references('id')->on('anotacaos');
             $table->string('url');
-            $table->integer('id_anotacao');
             $table->timestamps();
         });
     }

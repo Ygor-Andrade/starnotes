@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Anotacaos_controller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +33,10 @@ Route::middleware([
     })->name('principal');
 
 
+    Route::post('/novoanotacao', [Anotacaos_Controller::class, 'store']);
 
 
-    
+
+
+
 });
