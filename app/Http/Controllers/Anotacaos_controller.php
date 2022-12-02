@@ -4,22 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use app\Models\Anotacao;
+use App\Models\Anotacao;
 
 class Anotacaos_controller extends Controller
 {
-    public function store(Request $request)
+    public function gravar(Request $request)
     {
         $anotacao = new Anotacao;
 
-        $anotacao->id_user = $request->id_user;
+        $user = auth()->user();
+        $anotacao->id_user= $user->id;
         $anotacao->titulo  = $request->titulo;
         $anotacao->nota = $request->nota;
-       
-       
-        $anotacao->data = date('Y-m-d');
-        $user = auth()->user();
-        $anotacao->user_id= $user->id;
 
         $anotacao->save();
         return redirect('principal');

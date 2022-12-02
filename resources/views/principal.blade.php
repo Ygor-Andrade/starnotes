@@ -66,6 +66,9 @@
 
 
               <div class="offcanvas-body">
+
+                
+
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li class="nav-item">
                     <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
@@ -75,6 +78,17 @@
                   </li>
                 </ul>
               </div>
+              <div>
+                  <div class="text-center">
+                    <p class="text-center text-white fw-bold">
+                      Olá
+                      <?php $user = auth()->user(); echo $user->name; ?>
+                      <br>
+                      email:<?php echo $user->email; ?>
+                      
+                    </p>
+                  </div>
+                </div>
             </div>
           </div>
         </nav>
@@ -131,7 +145,6 @@
 
 
     <div class="d-flex" data-masonry='{"percentPosition": true}'>
-
       <div class="card m-4">
         <div class="data">Blog <time>10 de Jul, 2020</time></div>
         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
@@ -370,36 +383,40 @@
     <i class="fa fa-plus my-bt-float"></i>
   </a>
 
- 
-    <div class="modal fade" id="modal-post" tabindex="-1" aria-labelledby="modal-postLabel" aria-hidden="true">
 
-    
-
-      <form>
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="modal-postLabel">Notas</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
+  <div class="modal fade" id="modal-post" tabindex="-1" aria-labelledby="modal-postLabel" aria-hidden="true">
 
 
-          <div class="mb-3">
-            <label for="" class="form-label"></label>
-            <textarea class="form-control" name="nota" id="nota" rows="3"></textarea>
+
+    <form method="POST" action="{{route('novoanotacao')}}" enctype="multipart/form-data">
+      @csrf
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modal-postLabel">Notas</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+          <div class="modal-body">
 
+            <div class="mb-3">
+              <label for="titulo" class="form-label">Titulo da anotação</label>
+              <input type="text" required class="form-control" name="titulo" id="titulo">
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-              <button type="submit" class="btn btn-primary">Salvar</button>
+
+            <div class="mb-3">
+              <textarea class="form-control" required name="nota" id="nota" rows="3"></textarea>
             </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
           </div>
         </div>
-      </form>
-    </div>
-  
+      </div>
+    </form>
+  </div>
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
@@ -421,12 +438,18 @@
     async></script>
 
 
-  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> -->
+  <script src="{{asset('js/tinymce/tinymce.min.js')}}" referrerpolicy="origin"></script>
   <script>
     tinymce.init({
       selector: 'textarea#nota', // Replace this CSS selector to match the placeholder element for TinyMCE
       plugins: 'code table lists image',
-      toolbar: 'undo redo | image | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
+      toolbar: 'undo redo | image | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | tae',
+ tup: function (editor) {
+        editor.on('change', function () {
+            tinymce.triggerSave();
+        });
+    }
     });
   </script>
 

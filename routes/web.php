@@ -33,7 +33,7 @@ Route::middleware([
     })->name('principal');
 
 
-    Route::post('/novoanotacao', [Anotacaos_Controller::class, 'store']);
+    Route::post('/novoanotacao', [Anotacaos_Controller::class, 'gravar'])->name('novoanotacao');
 
 
 
