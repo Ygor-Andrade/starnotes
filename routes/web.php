@@ -35,6 +35,7 @@ Route::middleware([
 
     Route::post('/novoanotacao', [Anotacaos_Controller::class, 'gravar'])->name('novoanotacao');
 
+    Route::get('/nota', [Anotacaos_Controller::class, 'gravar'])->name('nota');
 
 
 

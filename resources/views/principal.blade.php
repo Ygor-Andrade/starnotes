@@ -67,7 +67,7 @@
 
               <div class="offcanvas-body">
 
-                
+
 
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li class="nav-item">
@@ -79,16 +79,17 @@
                 </ul>
               </div>
               <div>
-                  <div class="text-center">
-                    <p class="text-center text-white fw-bold">
-                      Olá
-                      <?php $user = auth()->user(); echo $user->name; ?>
-                      <br>
-                      email:<?php echo $user->email; ?>
-                      
-                    </p>
-                  </div>
+                <div class="text-center">
+                  <p class="text-center text-white fw-bold">
+                    Olá
+                    <?php $user = auth()->user(); echo $user->name; ?>
+                    <br>
+                    email:
+                    <?php echo $user->email; ?>
+
+                  </p>
                 </div>
+              </div>
             </div>
           </div>
         </nav>
@@ -169,6 +170,13 @@
           <a href="#">Aventura</a>
           <a href="#">Negócios</a>
         </div>
+        <div class="d-flex flex-row-reverse">
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-regular fa-trash-can"></i></button>
+
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
+        </div>
 
       </div>
 
@@ -190,7 +198,13 @@
           <a href="#">Aventura</a>
           <a href="#">Negócios</a>
         </div>
+        <div class="d-flex flex-row-reverse">
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-regular fa-trash-can"></i></button>
 
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
+        </div>
       </div>
 
       <div class="card m-4">
@@ -212,7 +226,13 @@
           <a href="#">Aventura</a>
           <a href="#">Negócios</a>
         </div>
+        <div class="d-flex flex-row-reverse">
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-regular fa-trash-can"></i></button>
 
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
+        </div>
       </div>
 
       <div class="card m-4">
@@ -234,7 +254,148 @@
           <a href="#">Aventura</a>
           <a href="#">Negócios</a>
         </div>
+        <div class="d-flex flex-row-reverse">
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-regular fa-trash-can"></i></button>
 
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
+        </div>
+      </div>
+
+      <div class="card m-4">
+        <div class="data">Blog <time>10 de Jul, 2020</time></div>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
+          tempore id, dolorem officia. </h2>
+        <div class="autor">
+          <div class="img-container">
+          </div>
+          <div class="info">
+            <span>Autor</span>
+            JUAN
+          </div>
+        </div>
+        <div class="tags">
+          <a href="#">Blog</a>
+          <a href="#">Viagem</a>
+          <a href="#">Aventura</a>
+          <a href="#">Negócios</a>
+        </div>
+        <div class="d-flex flex-row-reverse">
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-regular fa-trash-can"></i></button>
+
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
+        </div>
+      </div>
+
+      <div class="card m-4">
+        <div class="data">Blog <time>10 de Jul, 2020</time></div>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
+          tempore id, dolorem officia. </h2>
+        <div class="autor">
+          <div class="img-container">
+          </div>
+          <div class="info">
+            <span>Autor</span>
+            JUAN
+          </div>
+        </div>
+        <div class="tags">
+          <a href="#">Blog</a>
+          <a href="#">Viagem</a>
+          <a href="#">Aventura</a>
+          <a href="#">Negócios</a>
+        </div>
+        <div class="d-flex flex-row-reverse">
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-regular fa-trash-can"></i></button>
+
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
+        </div>
+      </div>
+
+      <div class="card m-4">
+        <div class="data">Blog <time>10 de Jul, 2020</time></div>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
+          tempore id, dolorem officia. </h2>
+        <div class="autor">
+          <div class="img-container">
+          </div>
+          <div class="info">
+            <span>Autor</span>
+            JUAN
+          </div>
+        </div>
+        <div class="tags">
+          <a href="#">Blog</a>
+          <a href="#">Viagem</a>
+          <a href="#">Aventura</a>
+          <a href="#">Negócios</a>
+        </div>
+        <div class="d-flex flex-row-reverse">
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-regular fa-trash-can"></i></button>
+
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
+        </div>
+      </div>
+
+      <div class="card m-4">
+        <div class="data">Blog <time>10 de Jul, 2020</time></div>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
+          tempore id, dolorem officia. </h2>
+        <div class="autor">
+          <div class="img-container">
+          </div>
+          <div class="info">
+            <span>Autor</span>
+            JUAN
+          </div>
+        </div>
+        <div class="tags">
+          <a href="#">Blog</a>
+          <a href="#">Viagem</a>
+          <a href="#">Aventura</a>
+          <a href="#">Negócios</a>
+        </div>
+        <div class="d-flex flex-row-reverse">
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-regular fa-trash-can"></i></button>
+
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
+        </div>
+      </div>
+
+      <div class="card m-4">
+        <div class="data">Blog <time>10 de Jul, 2020</time></div>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
+          tempore id, dolorem officia. </h2>
+        <div class="autor">
+          <div class="img-container">
+          </div>
+          <div class="info">
+            <span>Autor</span>
+            JUAN
+          </div>
+        </div>
+        <div class="tags">
+          <a href="#">Blog</a>
+          <a href="#">Viagem</a>
+          <a href="#">Aventura</a>
+          <a href="#">Negócios</a>
+        </div>
+        <div class="d-flex flex-row-reverse">
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-regular fa-trash-can"></i></button>
+
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
+        </div>
       </div>
 
       <div class="card m-4">
@@ -256,112 +417,13 @@
           <a href="#">Negócios</a>
         </div>
 
-      </div>
+        <div class="d-flex flex-row-reverse">
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-regular fa-trash-can"></i></button>
 
-      <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
-          tempore id, dolorem officia. </h2>
-        <div class="autor">
-          <div class="img-container">
-          </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
-          </div>
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
         </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-
-      </div>
-
-      <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
-          tempore id, dolorem officia. </h2>
-        <div class="autor">
-          <div class="img-container">
-          </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
-          </div>
-        </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-
-      </div>
-
-      <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
-          tempore id, dolorem officia. </h2>
-        <div class="autor">
-          <div class="img-container">
-          </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
-          </div>
-        </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-
-      </div>
-
-      <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
-          tempore id, dolorem officia. </h2>
-        <div class="autor">
-          <div class="img-container">
-          </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
-          </div>
-        </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-
-      </div>
-
-      <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
-          tempore id, dolorem officia. </h2>
-        <div class="autor">
-          <div class="img-container">
-          </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
-          </div>
-        </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-
-
 
       </div>
 
@@ -445,11 +507,11 @@
       selector: 'textarea#nota', // Replace this CSS selector to match the placeholder element for TinyMCE
       plugins: 'code table lists image',
       toolbar: 'undo redo | image | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | tae',
- tup: function (editor) {
+      tup: function (editor) {
         editor.on('change', function () {
-            tinymce.triggerSave();
+          tinymce.triggerSave();
         });
-    }
+      }
     });
   </script>
 

@@ -15,6 +15,24 @@
     border-color: white;
     color: white;
   }
+
+  .btnfinalcard{
+    width: 35px;
+    height: 40px;
+    color: #fff;
+    background-color: #17141d;
+    margin-top: 5px;
+
+  }
+
+  
+  
+  .btnfinalcard:hover{
+    color:#0076C8 ;
+   
+  }
+
+
   
   .search_input {
     color: white;
@@ -171,11 +189,6 @@
     color: var(--quaternary);
   }
   
-  /* separador de cards */
-  /*  */
-  
-  
-  /* mover */
   
   *{padding:0;margin:0;}
   
@@ -213,6 +226,8 @@
   .bingalinga{
     width: 300px;
     height: 70px;
+
+  
   
   }
   

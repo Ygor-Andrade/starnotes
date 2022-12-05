@@ -22,6 +22,28 @@ class Anotacaos_controller extends Controller
     }
 
 
+    public function get_notas(){
+        $user_id = auth()->user()->id;
+        //Load registros onde o tipo=receita e user_id=$user_id
+       
+        $nota = Anotacao::where('user_id', $user_id)->where('tipo', 'nota')->get();
+        $totNota = $nota->sum('nota');
+        
+        
+    
+        // $totDespesas = $despesas->sum('valor');
+
+        $parametros = [
+            'totNota' => $totNota, 
+            'nota' => $nota,
+            
+           
+        ];
+
+        //carrega a VIEW extrato enviando as variáveis $despesas e $receitas
+        return view('principal', $parametros);
+    }
+
 
 
 }
