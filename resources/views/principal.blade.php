@@ -146,7 +146,31 @@
 
 
     <div class="d-flex" data-masonry='{"percentPosition": true}'>
+
+    @if(count($anotacaos) == 0 )
+    <p>Não há notas criadas</p>
+    @else
+      @foreach($anotacaos as $anotacao)
       <div class="card m-4">
+        <div class="data">Publicado em <time>{{$anotacao->timestemp}}</time></div>
+        <h2>{{$anotacao->titulo}}</h2>
+        <div>
+          {! $anotacao->nota !}
+        </div>
+        <div class="d-flex flex-row-reverse">
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-regular fa-trash-can"></i></button>
+
+          <button class="btnfinalcard " type="button">
+            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
+        </div>
+      </div>
+      @endforeach
+
+    @endif
+
+
+      <!-- <div class="card m-4">
         <div class="data">Blog <time>10 de Jul, 2020</time></div>
         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
           tempore id Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste
@@ -423,7 +447,7 @@
 
           <button class="btnfinalcard " type="button">
             <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
-        </div>
+        </div> -->
 
       </div>
 
@@ -450,7 +474,7 @@
 
 
 
-    <form method="POST" action="{{route('novoanotacao')}}" enctype="multipart/form-data">
+    <form method="POST" action="{{route('gravar')}}" enctype="multipart/form-data">
       @csrf
       <div class="modal-dialog">
         <div class="modal-content">
@@ -466,7 +490,7 @@
             </div>
 
             <div class="mb-3">
-              <textarea class="form-control" required name="nota" id="nota" rows="3"></textarea>
+              <textarea class="form-control" name="nota" id="nota" rows="3"></textarea>
             </div>
 
           </div>

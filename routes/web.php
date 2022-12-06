@@ -28,14 +28,10 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/principal', function () {
-        return view('principal');
-    })->name('principal');
+    Route::get('/principal',[Anotacaos_controller::class, 'get_notas'] )->name('principal');
 
 
-    Route::post('/novoanotacao', [Anotacaos_Controller::class, 'gravar'])->name('novoanotacao');
-
-    Route::get('/nota', [Anotacaos_Controller::class, 'gravar'])->name('nota');
+    Route::post('/gravar', [Anotacaos_Controller::class, 'gravar'])->name('gravar');
 
 
 
