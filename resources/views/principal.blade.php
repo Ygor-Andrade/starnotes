@@ -147,15 +147,19 @@
 
     <div class="d-flex" data-masonry='{"percentPosition": true}'>
 
-    @if(count($anotacaos) == 0 )
-    <p>Não há notas criadas</p>
-    @else
+      @if(count($anotacaos) == 0 )
+      <p>Não há notas criadas</p>
+      @else
       @foreach($anotacaos as $anotacao)
       <div class="card m-4">
         <div class="data">Publicado em <time>{{$anotacao->timestemp}}</time></div>
-        <h2>{{$anotacao->titulo}}</h2>
+        <h1>{{$anotacao->titulo}}</h1>
         <div>
-          {! $anotacao->nota !}
+          <h2>
+            {!! $anotacao->nota !!}
+          </h2>
+
+
         </div>
         <div class="d-flex flex-row-reverse">
           <button class="btnfinalcard " type="button">
@@ -167,7 +171,7 @@
       </div>
       @endforeach
 
-    @endif
+      @endif
 
 
       <!-- <div class="card m-4">
@@ -449,11 +453,11 @@
             <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
         </div> -->
 
-      </div>
+    </div>
 
 
 
-      <!-- Code begins here -->
+    <!-- Code begins here -->
 
 
 

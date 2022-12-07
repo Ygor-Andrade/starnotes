@@ -101,16 +101,11 @@
   .card {
     flex-shrink: 0;
     width: 300px;
-    /* height: 400px; */
     border-radius: 20px;
-    /* display: flex;
-    flex-direction: column; */
     justify-content: space-between;
     background-color: var(--secondary);
     padding: 30px;
     font-size: 10px;
-    /* overflow: hidden; */
-    /* position: relative; */
     
   }
   
@@ -125,6 +120,11 @@
   .card .data time {
     color: white;
   }
+
+  .card h1 {
+    color: white;
+  }
+
   
   .card h2 {
     font-size: 16px;
@@ -133,8 +133,12 @@
     display: block;
     /* height: 110px; */
     color: white;
+
   }
-  
+
+ 
+
+
   .card .autor {
     display: flex;
     align-items: center;
@@ -230,6 +234,8 @@
   
   
   }
+
+  
   
   @media only screen and (max-width: 320px) {
   
