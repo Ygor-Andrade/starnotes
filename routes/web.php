@@ -33,7 +33,7 @@ Route::middleware([
 
     Route::post('/gravar', [Anotacaos_Controller::class, 'gravar'])->name('gravar');
 
-
+    Route::delete('/deletar/{id}', [Anotacaos_Controller::class, 'deletar'])->name('deletar');
 
 
 });

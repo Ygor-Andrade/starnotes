@@ -30,6 +30,18 @@ class Anotacaos_controller extends Controller
         return view('principal', ['anotacaos'=> $anotacaos]);
     }
 
+    public function deletar($id){
+        Anotacao::findOrFail($id)->delete();
 
+        return redirect('principal');
+    }
 
+    public function get_anotacao($id){
+        $anotacao = Anotacao::findOrFail($id);
+        $id_user = auth()->user()->id;
+       
+        $anotacaos = Anotacao::where('id_user', $id_user)->get();
+
+        return view('principal', ['anotacaos' => $anotacaos]);
+    }
 }

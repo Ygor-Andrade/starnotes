@@ -1,549 +1,304 @@
 <!doctype html>
 <html lang="pt-br">
 
-<head>
-  <title>StarNotes</title>
+  <head>
+    <title>StarNotes</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-
-  <!-- Icons -->
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-  <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- Icons -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-</head>
+    <link rel="stylesheet" href="/css/style.css">
 
 
-
-<body class="bg-teste-fundo">
-  <header class="">
-    <nav class="navbar bg-teste">
-      <div class="container-fluid">
-
-        <a class="navbar-brand text-light"><img width="60" src="imagens/loguinho.png" alt=""> StarNotes</a>
-
-        <!-- pesquisa pc -->
-
-        <div class="d-none d-lg-block">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button id="button" class="btn btn-pesquisar pesquisa-celular" type="submit">Pesquisar</button>
-          </form>
-        </div>
+  </head>
 
 
 
-        <nav class="navbar fixed-right ">
-          <div class="container-fluid">
+  <body class="bg-teste-fundo">
+    <header class="">
+      <nav class="navbar bg-teste">
+        <div class="container-fluid">
 
-            <button class="navbar-toggler btn-menu" type="button" data-bs-toggle="offcanvas" 0
-              data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-              <i class="fa-solid fa-bars text-white"></i>
-            </button>
-            <div class="offcanvas offcanvas-end bg-fundo" tabindex="-1" id="offcanvasDarkNavbar"
-              aria-labelledby="offcanvasDarkNavbarLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title text-light" id="offcanvasDarkNavbarLabel">Configurações</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-              </div>
-              <!-- pesquisa celular -->
+          <a class="navbar-brand text-light"><img width="60" src="imagens/loguinho.png" alt=""> StarNotes</a>
 
-              <form class="d-flex d-lg-none" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button id="button" class="btn btn-pesquisar" type="submit">Pesquisar</button>
-              </form>
+          <!-- pesquisa pc -->
 
-
-              <div class="offcanvas-body">
+          <div class="d-none d-lg-block">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button id="button" class="btn btn-pesquisar pesquisa-celular" type="submit">Pesquisar</button>
+            </form>
+          </div>
 
 
 
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Link</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <div class="text-center">
-                  <p class="text-center text-white fw-bold">
-                    Olá
-                    <?php $user = auth()->user(); echo $user->name; ?>
-                    <br>
-                    email:
-                    <?php echo $user->email; ?>
+          <nav class="navbar fixed-right ">
+            <div class="container-fluid">
 
-                  </p>
+              <button class="navbar-toggler btn-menu" type="button" data-bs-toggle="offcanvas" 0
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <i class="fa-solid fa-bars text-white"></i>
+              </button>
+              <div class="offcanvas offcanvas-end bg-fundo" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title text-light" id="offcanvasDarkNavbarLabel">Configurações</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <!-- pesquisa celular -->
+
+                <form class="d-flex d-lg-none" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button id="button" class="btn btn-pesquisar" type="submit">Pesquisar</button>
+                </form>
+
+
+                <div class="offcanvas-body">
+
+
+
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-light" href="#">Link</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="text-center">
+                    <p class="text-center text-white fw-bold">
+                      Olá
+                      <?php $user = auth()->user(); echo $user->name; ?>
+                      <br>
+                      email:
+                      <?php echo $user->email; ?>
+
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </nav>
+          </nav>
 
 
 
 
-      </div>
+        </div>
 
 
-      </div>
-    </nav>
+        </div>
+      </nav>
 
 
-  </header>
+    </header>
 
 
-  <main>
+    <main>
 
-    <div class="d-flex flex-row mb-3 justify-content-between justify-content-md-start">
+      <div class="d-flex flex-row mb-3 justify-content-between justify-content-md-start">
 
-      <div>
-        <button class="btn btn-primary botoes-barra" type="button">
-          <i class="fa-regular fa-note-sticky"></i>
-          Notas</button>
-
-      </div>
-
-      <div> <button class="btn btn-primary botoes-barra" type="button">
-          <i class="fa-regular fa-bell"></i>
-          Alarmes</button></div>
-
-      <div> <button class="btn btn-primary botoes-barra" type="button">
-          <i class="fa-regular fa-folder-closed"></i>
-          Pastas</button>
-      </div>
-
-      <div><button class="btn btn-primary botoes-barra" type="button">
-          <i class="fa-regular fa-trash-can"></i>
-          Lixeira</button>
-      </div>
-
-
-    </div>
-
-
-    <!-- <div class="d-none d-lg-block m-4 bingalinga mx-auto">
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Escreva sua anotação" aria-label="Search">
-      </form>
-    </div> -->
-
-
-
-
-    <div class="d-flex" data-masonry='{"percentPosition": true}'>
-
-      @if(count($anotacaos) == 0 )
-      <p>Não há notas criadas</p>
-      @else
-      @foreach($anotacaos as $anotacao)
-      <div class="card m-4">
-        <div class="data">Publicado em <time>{{$anotacao->timestemp}}</time></div>
-        <h1>{{$anotacao->titulo}}</h1>
         <div>
-          <h2>
+          <button class="btn btn-primary botoes-barra" type="button">
+            <i class="fa-regular fa-note-sticky"></i>
+            Notas</button>
+
+        </div>
+
+        <div> <button class="btn btn-primary botoes-barra" type="button">
+            <i class="fa-regular fa-bell"></i>
+            Alarmes</button></div>
+
+        <div> <button class="btn btn-primary botoes-barra" type="button">
+            <i class="fa-regular fa-folder-closed"></i>
+            Pastas</button>
+        </div>
+
+        <div><button class="btn btn-primary botoes-barra" type="button">
+            <i class="fa-regular fa-trash-can"></i>
+            Lixeira</button>
+        </div>
+
+
+      </div>
+
+
+
+
+      <div class="d-flex" data-masonry='{"percentPosition": true}'>
+
+        @if(count($anotacaos) == 0 )
+        <p>Não há notas criadas</p>
+        @else
+        @foreach($anotacaos as $anotacao)
+        <div class="card m-4" id="{{$anotacao->id}}">
+          <div class="data">Publicado em <time>{{$anotacao->timestemp}}</time></div>
+          <h1 class="titulo">{{$anotacao->titulo}}</h1>
+          <div class="text-light nota">
             {!! $anotacao->nota !!}
-          </h2>
-
-
-        </div>
-        <div class="d-flex flex-row-reverse">
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-regular fa-trash-can"></i></button>
-
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
-        </div>
-      </div>
-      @endforeach
-
-      @endif
-
-
-      <!-- <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
-          tempore id Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste
-          accusamus, cum
-          tempore id Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste
-          accusamus, cum
-          tempore id Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste
-          accusamus, cum
-          tempore id.</h2>
-        <div class="autor">
-          <div class="img-container">
           </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
+          <div class="d-flex flex-row-reverse">
+            <form method="POST" action="{{route('deletar', [$anotacao->id])}}" class="d-inline">
+              @csrf
+              @method('DELETE')
+              <button type="submit" onClick="if(!confirm('Tem certeza que deseja excluir?')){return false}"
+                class="btn btn-link mx-3"><i class="fa-regular fa-trash-can"></i></button>
+            </form>
+
+            <a href="" class="btn btn-link" onClick="carregaDadosModal({{$anotacao->id}})" data-bs-toggle="modal" data-bs-target="#modal-edicao"><i
+                class="fs-5 fa-solid fa-pen-to-square"></i></a>
+
           </div>
         </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-        <div class="d-flex flex-row-reverse">
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-regular fa-trash-can"></i></button>
+        @endforeach
 
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
-        </div>
+        @endif
 
       </div>
 
-      <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
-          tempore id, dolorem officia. dolorem officiadolorem officiadolorem officia </h2>
-        <div class="autor">
-          <div class="img-container">
-          </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
-          </div>
-        </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-        <div class="d-flex flex-row-reverse">
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-regular fa-trash-can"></i></button>
 
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
-        </div>
-      </div>
 
-      <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amdolorem officiaet consectetur adipisicing elit. Corrupti ab voluptate alias iste
-          accusamus, cum
-          tempore id, dolorem officia. </h2>
-        <div class="autor">
-          <div class="img-container">
-          </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
-          </div>
-        </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-        <div class="d-flex flex-row-reverse">
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-regular fa-trash-can"></i></button>
+      <!-- Code begins here -->
 
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
-        </div>
-      </div>
 
-      <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
-          tempore id, dolorem offdolorem officiadolorem officiadolorem officiadolorem officiadolorem officiadolorem
-          officiadolorem officiadolorem officiadolorem officiadolorem officiadolorem officiadolorem officiaicia. </h2>
-        <div class="autor">
-          <div class="img-container">
-          </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
+
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+
+    <a href="#" class="bt-float " data-bs-toggle="modal" data-bs-target="#modal-post">
+      <i class="fa fa-plus my-bt-float"></i>
+    </a>
+
+
+    <div class="modal fade" id="modal-post" tabindex="-1" aria-labelledby="modal-postLabel" aria-hidden="true">
+
+
+
+      <form method="POST" action="{{route('gravar')}}" enctype="multipart/form-data">
+        @csrf
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modal-postLabel">Notas</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <div class="mb-3">
+                <label for="titulo" class="form-label">Titulo da anotação</label>
+                <input type="text" required class="form-control" name="titulo" id="titulo">
+              </div>
+
+              <div class="mb-3">
+                <textarea class="form-control" name="nota" id="nota" rows="3"></textarea>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="submit" class="btn btn-primary">Salvar</button>
+            </div>
           </div>
         </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-        <div class="d-flex flex-row-reverse">
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-regular fa-trash-can"></i></button>
+      </form>
+    </div>
 
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
-        </div>
-      </div>
+    <div class="modal fade" id="modal-edicao" tabindex="-1" aria-labelledby="modal-edicaoLabel" aria-hidden="true">
+      <form method="POST" action="" enctype="multipart/form-data">
+        @csrf
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modal-postLabel">Notas</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
 
-      <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
-          tempore id, dolorem officia. </h2>
-        <div class="autor">
-          <div class="img-container">
-          </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
-          </div>
-        </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-        <div class="d-flex flex-row-reverse">
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-regular fa-trash-can"></i></button>
+              <div class="mb-3">
+                <label for="titulo" class="form-label">Edição da anotação</label>
+                <input type="text" required class="form-control" name="titulo" id="edit-titulo">
+              </div>
 
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
-        </div>
-      </div>
+              <div class="mb-3">
+                <textarea class="form-control" name="nota" id="edit-nota" rows="3"></textarea>
+              </div>
 
-      <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
-          tempore id, dolorem officia. </h2>
-        <div class="autor">
-          <div class="img-container">
-          </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="submit" class="btn btn-primary">Atualizar</button>
+            </div>
           </div>
         </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-        <div class="d-flex flex-row-reverse">
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-regular fa-trash-can"></i></button>
-
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
-        </div>
-      </div>
-
-      <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
-          tempore id, dolorem officia. </h2>
-        <div class="autor">
-          <div class="img-container">
-          </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
-          </div>
-        </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-        <div class="d-flex flex-row-reverse">
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-regular fa-trash-can"></i></button>
-
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
-        </div>
-      </div>
-
-      <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
-          tempore id, dolorem officia. </h2>
-        <div class="autor">
-          <div class="img-container">
-          </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
-          </div>
-        </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-        <div class="d-flex flex-row-reverse">
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-regular fa-trash-can"></i></button>
-
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
-        </div>
-      </div>
-
-      <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
-          tempore id, dolorem officia. </h2>
-        <div class="autor">
-          <div class="img-container">
-          </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
-          </div>
-        </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-        <div class="d-flex flex-row-reverse">
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-regular fa-trash-can"></i></button>
-
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
-        </div>
-      </div>
-
-      <div class="card m-4">
-        <div class="data">Blog <time>10 de Jul, 2020</time></div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab voluptate alias iste accusamus, cum
-          tempore id, dolorem officia. </h2>
-        <div class="autor">
-          <div class="img-container">
-          </div>
-          <div class="info">
-            <span>Autor</span>
-            JUAN
-          </div>
-        </div>
-        <div class="tags">
-          <a href="#">Blog</a>
-          <a href="#">Viagem</a>
-          <a href="#">Aventura</a>
-          <a href="#">Negócios</a>
-        </div>
-
-        <div class="d-flex flex-row-reverse">
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-regular fa-trash-can"></i></button>
-
-          <button class="btnfinalcard " type="button">
-            <i class="fs-5 fa-solid fa-pen-to-square"></i></button>
-        </div> -->
-
+      </form>
     </div>
 
 
 
-    <!-- Code begins here -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+      </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+      </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+      async></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+      async></script>
 
 
+    <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> -->
+    <script src="{{asset('js/tinymce/tinymce.min.js')}}" referrerpolicy="origin"></script>
+    <script>
+      tinymce.init({
+        selector: 'textarea#nota', // Replace this CSS selector to match the placeholder element for TinyMCE
+        plugins: 'code table lists image',
+        toolbar: 'undo redo | image | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | tae',
+        tup: function (editor) {
+          editor.on('change', function () {
+            tinymce.triggerSave();
+          });
+        }
+      });
 
+      const carregaDadosModal = (id)=>{
+        var cardEdicao = document.getElementById(id)
+        var titEdicao = cardEdicao.querySelector('.titulo').innerText
+        var titnota = cardEdicao.querySelector('.nota').innerHTML
 
-  </main>
+        document.getElementById('edit-titulo').value = titEdicao
+        document.getElementById('edit-nota').value = titnota
+      } 
 
-
-  <footer>
-
-  </footer>
-
-  <a href="#" class="bt-float " data-bs-toggle="modal" data-bs-target="#modal-post">
-    <i class="fa fa-plus my-bt-float"></i>
-  </a>
-
-
-  <div class="modal fade" id="modal-post" tabindex="-1" aria-labelledby="modal-postLabel" aria-hidden="true">
-
-
-
-    <form method="POST" action="{{route('gravar')}}" enctype="multipart/form-data">
-      @csrf
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="modal-postLabel">Notas</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-
-            <div class="mb-3">
-              <label for="titulo" class="form-label">Titulo da anotação</label>
-              <input type="text" required class="form-control" name="titulo" id="titulo">
-            </div>
-
-            <div class="mb-3">
-              <textarea class="form-control" name="nota" id="nota" rows="3"></textarea>
-            </div>
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-            <button type="submit" class="btn btn-primary">Salvar</button>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
     </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
-    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
-    </script>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
-    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
-    async></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
-    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
-    async></script>
 
 
-  <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> -->
-  <script src="{{asset('js/tinymce/tinymce.min.js')}}" referrerpolicy="origin"></script>
-  <script>
-    tinymce.init({
-      selector: 'textarea#nota', // Replace this CSS selector to match the placeholder element for TinyMCE
-      plugins: 'code table lists image',
-      toolbar: 'undo redo | image | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | tae',
-      tup: function (editor) {
-        editor.on('change', function () {
-          tinymce.triggerSave();
-        });
-      }
-    });
-  </script>
-
-
-</body>
+  </body>
 
 </html>
