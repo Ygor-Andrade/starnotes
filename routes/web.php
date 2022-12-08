@@ -30,10 +30,10 @@ Route::middleware([
 
     Route::get('/principal',[Anotacaos_controller::class, 'get_notas'] )->name('principal');
 
-
     Route::post('/gravar', [Anotacaos_Controller::class, 'gravar'])->name('gravar');
 
     Route::delete('/deletar/{id}', [Anotacaos_Controller::class, 'deletar'])->name('deletar');
 
+    Route::put('/atualizar_nota', [Anotacaos_Controller::class, 'atualizar_nota'])->name('atualizar_nota');
 
 });

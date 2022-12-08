@@ -13,8 +13,8 @@ class Anotacaos_controller extends Controller
         $anotacao = new Anotacao;
 
         $user = auth()->user();
-        $anotacao->id_user= $user->id;
-        $anotacao->titulo  = $request->titulo;
+        $anotacao->id_user = $user->id;
+        $anotacao->titulo = $request->titulo;
         $anotacao->nota = $request->nota;
 
         $anotacao->save();
@@ -22,26 +22,38 @@ class Anotacaos_controller extends Controller
     }
 
 
-    public function get_notas(){
+    public function get_notas()
+    {
         $id_user = auth()->user()->id;
-       
+
         $anotacaos = Anotacao::where('id_user', $id_user)->get();
 
-        return view('principal', ['anotacaos'=> $anotacaos]);
+        return view('principal', ['anotacaos' => $anotacaos]);
     }
 
-    public function deletar($id){
+    public function deletar($id)
+    {
         Anotacao::findOrFail($id)->delete();
 
         return redirect('principal');
     }
 
-    public function get_anotacao($id){
+    public function get_anotacao($id)
+    {
         $anotacao = Anotacao::findOrFail($id);
         $id_user = auth()->user()->id;
-       
+
         $anotacaos = Anotacao::where('id_user', $id_user)->get();
 
         return view('principal', ['anotacaos' => $anotacaos]);
     }
+
+    public function atualizar_nota(request $request)
+    {
+        Anotacao::findOrFail($request->id)->update($request->all());
+        return redirect('/principal');
+
+    }
+
+
 }
