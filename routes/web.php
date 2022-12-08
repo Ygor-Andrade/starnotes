@@ -36,4 +36,6 @@ Route::middleware([
 
     Route::put('/atualizar_nota', [Anotacaos_Controller::class, 'atualizar_nota'])->name('atualizar_nota');
 
+    Route::post('/upload', 'PostTasksController@upload');
+
 });
